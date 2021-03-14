@@ -1,0 +1,53 @@
+<h3>Cart</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<!--
+Error: src/app/cart/cart.component.html:8:17 - error TS2339: Property 'name' does not exist on type 'never'.
+
+8   <span>{{ item.name }}</span>
+                  ~~~~
+
+  src/app/cart/cart.component.ts:9:16
+    9   templateUrl: './cart.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:9:17 - error TS2339: Property 'price' does not exist on type 'never'.
+
+9   <span>{{ item.price | currency }}</span>
+                  ~~~~~
+
+  src/app/cart/cart.component.ts:9:[93m16
+    9   templateUrl: './cart.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+-->
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>                  <!-- TODO:ローカルでのng serveでエラー -->
+  <span>{{ item.price | currency }}</span>      <!-- TODO:ローカルでのng serveでエラー -->
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="Address" type="text" formControlName="address">
+  </div>
+
+  <button class="button" type="submit">Perchase</button>
+
+</form>
