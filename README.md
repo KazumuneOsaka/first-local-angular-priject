@@ -2,6 +2,8 @@
 
 追加コメント
 
+追加コメント２
+
 # FirstLocalAngularPriject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
