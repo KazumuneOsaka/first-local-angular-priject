@@ -1,3 +1,9 @@
+Angularの開発・実行環境について
+  stackbritz        よく出来ているが、まだデバッグモードがないのと、ソースのバージョン管理が出来ない。
+  VisualStudioCode  アプリの起動に難あり、デバッグは未確認、バージョン管理はＯＫ。起動・停止をコンソールからやればほぼＯＫ。
+  WebStorm          起動・停止もＯＫ、デバッグ未確認、バージョン管理確認中。有料なのが難点！？
+                    多分いろいろこいつが一番高機能＆使いやすいのでは？
+
 サンプルアプリケーションの構成
 
 files　                                   プロジェクトフォルダー
@@ -120,4 +126,4 @@ ERROR: 19:3   eofline                 file should end with a newline
 ERROR: 71:3   eofline                 file should end with a newline
 
 Lint errors found in the listed files.
-➜  first-local-angular-priject git:(master) ✗ 
+➜  first-local-angular-priject git:(master) ✗
